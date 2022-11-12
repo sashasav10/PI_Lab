@@ -4,18 +4,7 @@
 	body {
 		background-color: #94E994;
 	}
-	button {
-		margin-top: 10px;
-		text-decoration: none;
-		color: black;
-		display: inline-block;
-		font-family: 'Montserrat', sans-serif;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		cursor: pointer;
-		height: 50px;
-		width: 150px;
-	}
+
 	.title {
 		text-align: center;
 	}
@@ -42,7 +31,7 @@
 		height: 150px;
 		display: block;
 		margin: 0 auto;
-		border-radius: 40%;
+		border-radius: 10%;
 		align-self: center;
 		}
 
