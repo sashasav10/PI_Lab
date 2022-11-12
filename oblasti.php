@@ -1,5 +1,5 @@
 <?php
-$fp = file_get_contents("./additional/oblinfo.txt");
+$fp = file_get_contents("/additional/oblinfo.txt");
 $lines = explode("\r\n", $fp);
 $count = 0;
 $total = 0;
