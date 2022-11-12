@@ -38,12 +38,12 @@ while(!feof($fp))
 {
 	echo "<td>$number</td>";
     if($count < $cols) {
-			if(count == "0"){
+			if(count == 0){
 			  $info = fgets($fp);
 			  echo "<td>$info</td>"; // render data item
 			  $count++;}
 			  else {
-			    if($count == "1"){
+			    if($count == 1){
 			      $info = fgets($fp);
 			      echo "<td>$info</td>"; // render data item
 			      $count++;
