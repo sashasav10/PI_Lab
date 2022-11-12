@@ -46,7 +46,7 @@ while(!feof($fp))
 			$perThousand = round($population * 100 / $universities, 2);
         $count = 0; // reset counter
 				$number++;
-				echo <td>$perThousand</td>;
+				echo "<td>$perThousand</td>";
         echo '</tr><tr>'; // close current row, start new row
     }
 }
