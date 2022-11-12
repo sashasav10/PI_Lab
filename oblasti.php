@@ -36,17 +36,32 @@ echo '<tr><th>№</th><th>Область</th><th>Населення, тис</th>
 echo '<tr>'; // open first row
 while(!feof($fp))
 {
-	//echo "<td>$number</td>"
+	echo "<td>$number</td>";
     if($count < $cols) {
-			$info = fgets($fp);
-        echo "<td>$info</td>"; // render data item
-        $count++;
+			if(count=0){
+			  $info = fgets($fp);
+			  echo "<td>$info</td>"; // render data item
+			  $count++;}
+			  else {
+			    if($count=1){
+			      $info = fgets($fp);
+			      echo "<td>$info</td>"; // render data item
+			      $count++;
+			      $population=$info;
+			    }
+			    else {
+			      $info = fgets($fp);
+			      echo "<td>$info</td>"; // render data item
+			      $count++;
+			      $universities=$info;
+			    }
+			  }
     }
 		else {
 			$perThousand = round($population * 100 / $universities, 2);
         $count = 0; // reset counter
 				$number++;
-			//	echo "<td>$perThousand</td>";
+				echo "<td>$perThousand</td>";
         echo '</tr><tr>'; // close current row, start new row
     }
 }
