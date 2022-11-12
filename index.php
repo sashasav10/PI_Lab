@@ -48,7 +48,7 @@
 <body>
 	<h1 class="title">Oleksandr Saveliev</h1>
 	<?php
-	$imgView = 'https://i.ytimg.com/vi/OcLTsA94DRo/maxresdefault.jpg';
+	$imgView = 'https://i.imgflip.com/2c4ilx.jpg';
 	echo "<div class='photo'>
 		<img class='img' src='$imgView'>
 		</div>";
