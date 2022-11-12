@@ -36,7 +36,7 @@ echo '<tr><th>№</th><th>Область</th><th>Населення, тис</th>
 echo '<tr>'; // open first row
 while(!feof($fp))
 {
-	echo "<td>$number</td>"
+	//echo "<td>$number</td>"
     if($count < $cols) {
 			$info = fgets($fp);
         echo "<td>$info</td>"; // render data item
