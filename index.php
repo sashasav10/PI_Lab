@@ -67,7 +67,7 @@ Software engineering, Cherkasy  (Unfinished higher), from 2019 to 2023 (4 year
 					<li class="il">Android developemnet. Ekreative edu (2022)</li>
 					<li class="il">Kotlin developemnet. Triare education (2022)</li>
 				</ul>
-			</div>
+			</div class="container-buttons">
 				<form action="sendEmail.php">
 					<button class="btn" type="submit">send email </button>
 				</form>
