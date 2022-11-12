@@ -1,41 +1,46 @@
 <?php
-$fp = file_get_contents("/additional/oblinfo.txt");
-$lines = explode("\r\n", $fp);
+if (!file_exists("./additional/oblinfo.txt")) {
+    echo "The file from above cannot be found!";
+    exit;
+}
+
+$fp = fopen("./additional/oblinfo.txt", "r");
+
+if (!$fp) {
+    echo "File cannot be opened";
+    exit;
+}
+
+// a bit of styling...
+echo <<<EOF
+<style>
+table, td, th {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid black;
+  text-align: left;
+}
+</style>
+EOF;
+
 $count = 0;
-$total = 0;
-?>
-<table class="text-center m-auto" border="1">
-    <thead>
-        <tr>
-            <td>№</td>
-            <td>Область</td>
-            <td>Населення, тис</td>
-            <td>Кількість ВНЗ</td>
-            <td>Число вузів на 100 тис населення</td>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        foreach ($lines as $key => $value) {
-            if ($key != 0) {
-                if ($key % 3 == 1) { $count++;
-        ?>
-            <tr>
-                <td>
-                    <?= $count; ?>
-                </td>
-                <?php } ?>
-                <td>
-                    <?= $value; ?>
-                </td>
-                <?php
-                if ($key % 3 == 2) $total = $value;
-                if ($key % 3 == 0) {
-                ?>
-                <td>
-                    <?= round($value * 100 / $total, 2); ?>
-                </td>
-            </tr>
-        <?php } } } ?>
-    </tbody>
-</table>
+$cols = 3; // the number of data items per row
+echo '<table>'; // open table
+// render headers
+echo '<tr><th>№</th><th>Область</th><th>Населення, тис</th>
+        <th>Кількість ВНЗ</th><th>Число вузів на 100 тис населення</th></tr>';
+echo '<tr>'; // open first row
+while(!feof($fp))
+{
+    if($count < $cols) {
+        $info = fgets($fp);
+        echo "<td>$info</td>"; // render data item
+        $count++;
+    } else {
+        $count = 0; // reset counter
+        echo '</tr><tr>'; // close current row, start new row
+    }
+}
+echo "</tr></table>"; // close final row, close table
+fclose($fp); // close file handle
