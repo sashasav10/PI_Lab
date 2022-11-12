@@ -23,9 +23,6 @@ table, td, th {
 }
 </style>
 EOF;
-$zero=0;
-$one=1;
-$two=2;
 $count = 0;
 $cols = 3; // the number of data items per row
 $number=1; //the number of string in a table
@@ -56,14 +53,14 @@ while(!feof($fp))
 			      echo "<td>$info</td>"; // render data item
 			      $count++;
 			      $universities=$info;
+						$perThousand = round($universities * 100 / $population, 2);
+						echo "<td>$perThousand</td>";
 			    }
 			  }
     }
 		else {
-			$perThousand = round($universities * 100 / $population, 2);
         $count = 0; // reset counter
 				$number++;
-				echo "<td>$perThousand</td>";
         echo '</tr><tr>'; // close current row, start new row
     }
 }

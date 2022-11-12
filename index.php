@@ -48,7 +48,7 @@
 <body>
 	<h1 class="title">Oleksandr Saveliev</h1>
 	<?php
-	$imgView = 'https://scontent.fvll1-1.fna.fbcdn.net/v/t39.30808-6/288678749_3382858978596873_7038233161579423658_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=g0WLUjShFRsAX85JQ1w&_nc_ht=scontent.fvll1-1.fna&oh=00_AfBjkOH32NBBlyIC81fti6chPtlTcc0yBm6gzo9-vtWETA&oe=63663349';
+	$imgView = 'https://ibb.co/wzmBnjD';
 	echo "<div class='photo'>
 		<img class='img' src='$imgView'>
 		</div>";
