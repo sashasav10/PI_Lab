@@ -7,8 +7,8 @@
 	button {
 		margin-top: 10px;
 		color: black;
-		display:table-cell;
- text-align:center;
+		display:flex;
+		text-align:center;
 		font-family: 'Montserrat', sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 2px;
@@ -66,14 +66,14 @@ Software engineering, Cherkasy  (Unfinished higher), from 2019 to 2023 (4 year
 					<li class="il">Android developemnet. Ekreative edu (2022)</li>
 					<li class="il">Kotlin developemnet. Triare education (2022)</li>
 				</ul>
-			<p>
+			</div>
 				<form action="sendEmail.php">
 					<button class="btn" type="submit">send email </button>
 				</form>
 				<form action="oblasti.php">
 					<button class="btn" type="submit">show info by region </button>
 				</form>
-	</p>
+		</div>
 	</section>
 </body>
 </html>
