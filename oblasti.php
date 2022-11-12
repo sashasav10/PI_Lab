@@ -27,8 +27,8 @@ EOF;
 $count = 0;
 $cols = 3; // the number of data items per row
 $number=1; //the number of string in a table
-$population=0;
-$universities=0;
+$population=100;
+$universities=13;
 echo '<table>'; // open table
 // render headers
 echo '<tr><th>№</th><th>Область</th><th>Населення, тис</th>
@@ -38,24 +38,9 @@ while(!feof($fp))
 {
 	echo "<td>$number</td>"
     if($count < $cols) {
-			if(count=0){
-        $info = fgets($fp);
+			$info = fgets($fp);
         echo "<td>$info</td>"; // render data item
-        $count++;}
-				else {
-					if($count=1){
-						$info = fgets($fp);
-		        echo "<td>$info</td>"; // render data item
-		        $count++;
-						$population=$info;
-					}
-					else {
-						$info = fgets($fp);
-		        echo "<td>$info</td>"; // render data item
-		        $count++;
-						$universities=$info;
-					}
-				}
+        $count++;
     }
 		else {
 			$perThousand = round($population * 100 / $universities, 2);
