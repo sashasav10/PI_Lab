@@ -19,6 +19,9 @@
 	.title {
 		text-align: center;
 	}
+	.container-buttons button{display:inline-block; *display:inline; zoom:1; vertical-align:top;}
+	.container-buttons{text-align:justify;}
+	.container-buttons:after{display:inline-block; *display:inline; zoom:1;  width:100%; content:"";}
 
 	.text {
 		margin-left: 10%;
@@ -35,8 +38,8 @@
 		margin-bottom: 1em;
 	}
 	.img {
-		width: 250px;
-		height: 250px;
+		width: 200px;
+		height: 150px;
 		display: block;
 		margin: 0 auto;
 		border-radius: 40%;
