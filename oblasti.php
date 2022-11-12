@@ -60,7 +60,7 @@ while(!feof($fp))
 			  }
     }
 		else {
-			$perThousand = round($population * 100 / $universities, 2);
+			$perThousand = round($universities * 100 / $population, 2);
         $count = 0; // reset counter
 				$number++;
 				echo "<td>$perThousand</td>";
