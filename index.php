@@ -48,7 +48,7 @@
 <body>
 	<h1 class="title">Oleksandr Saveliev</h1>
 	<?php
-	$imgView = 'https://drive.google.com/file/d/1OBCFfjzJZD91-jy6z_Q1FSj4cwB_qiRK/view?usp=share_link';
+	$imgView = 'https://i.ytimg.com/vi/OcLTsA94DRo/maxresdefault.jpg';
 	echo "<div class='photo'>
 		<img class='img' src='$imgView'>
 		</div>";
