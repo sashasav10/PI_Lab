@@ -50,12 +50,11 @@ while(!feof($fp))
 						$population=$info;
 					}
 					else {
-						if($count=1){
 						$info = fgets($fp);
 		        echo "<td>$info</td>"; // render data item
 		        $count++;
 						$universities=$info;
-					}}
+					}
 				}
     }
 		else {
