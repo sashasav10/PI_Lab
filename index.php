@@ -4,13 +4,24 @@
 	body {
 		background-color: #94E994;
 	}
-
+	button {
+		margin-top: 10px;
+		color: black;
+		display:table-cell;
+ text-align:center;
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		cursor: pointer;
+		height: 50px;
+		width: 150px;
+	}
 	.title {
 		text-align: center;
 	}
-	.container-buttons button{display:inline-block; *display:inline; zoom:1; vertical-align:top;}
-	.container-buttons{text-align:justify;}
-	.container-buttons:after{display:inline-block; *display:inline; zoom:1;  width:100%; content:"";}
+	.container-buttons {
+		 width:100%;
+}
 
 	.text {
 		margin-left: 10%;
