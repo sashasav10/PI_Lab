@@ -1,10 +1,10 @@
 <?php
-$fp = file_get_contents("oblinfo.txt");
+$fp = file_get_contents("./additional/oblinfo.txt");
 $lines = explode("\r\n", $fp);
 $count = 0;
 $total = 0;
 ?>
-<table class="text-center m-auto" border="2">
+<table class="text-center m-auto" border="1">
     <thead>
         <tr>
             <td>№</td>
@@ -25,7 +25,8 @@ $total = 0;
                     <?= $count; ?>
                 </td>
                 <?php } ?>
-                <td><?= $value; ?>
+                <td>
+                    <?= $value; ?>
                 </td>
                 <?php
                 if ($key % 3 == 2) $total = $value;
