@@ -23,7 +23,9 @@ table, td, th {
 }
 </style>
 EOF;
-
+$zero=0;
+$one=1;
+$two=2;
 $count = 0;
 $cols = 3; // the number of data items per row
 $number=1; //the number of string in a table
@@ -38,7 +40,7 @@ while(!feof($fp))
 {
 	echo "<td>$number</td>";
     if($count < $cols) {
-			if(count == 0){
+			if($count == 0){
 			  $info = fgets($fp);
 			  echo "<td>$info</td>"; // render data item
 			  $count++;}
