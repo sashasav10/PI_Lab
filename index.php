@@ -5,9 +5,10 @@
 		background-color: #94E994;
 	}
 	button {
+		float:left;
 		margin-top: 10px;
 		color: black;
-		display:flex;
+		display:table-cell;
 		text-align:center;
 		font-family: 'Montserrat', sans-serif;
 		text-transform: uppercase;
