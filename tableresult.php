@@ -10,10 +10,11 @@
 	}
 
 	table {
-		text-align: center;
-		width: 100%;
-		margin-bottom: 1em;
-		border-collapse: collapse;
+		table-layout: fixed;
+	  width: auto;
+	  border-collapse: collapse;
+	  border: 3px solid black;
+	  text-align: left;
 	}
 
 	th {
@@ -30,12 +31,6 @@
 
 <body>
 	<table>
-		<col style="width:5%">
-		<col style="width:15%">
-		<col style="width:15%">
-		<col style="width:10%">
-		<col style="width:10%">
-		<col style="width:45%">
 		<thead>
 			<tr>
 				<th scope='col'>№</th>
