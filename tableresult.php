@@ -2,43 +2,26 @@
 <html>
 
 <style>
-	html {
-		font: 0.75em/1.5 sans-serif;
-		color: #333;
-		background-color: #fff;
-		padding: 1em;
-	}
 
-	table {
-		table-layout: fixed;
-	  width: auto;
-	  border-collapse: collapse;
-	  border: 3px solid black;
-	  text-align: left;
-	}
-
-	th {
-		font-weight: bold;
-		background-color: #ddd;
-	}
-
-	th,
-	td {
-		padding: 0.5em;
-		border: 1px solid #ccc;
-	}
+table, td, th {
+	table-layout: fixed;
+	width: auto;
+	border-collapse: collapse;
+	border: 3px solid black;
+	text-align: left;
+}
 </style>
 
 <body>
 	<table>
 		<thead>
 			<tr>
-				<th scope='col'>№</th>
-				<th scope='col'>Середній бал</th>
-				<th scope='col'>К-ть бюджетників</th>
-				<th scope='col'>Недобор</th>
-				<th scope='col'>К-ть котрактників</th>
-				<th scope='col'>ВНЗ</th>
+				<th>№</th>
+				<th>Середній бал</th>
+				<th>К-ть бюджетників</th>
+				<th>Недобор</th>
+				<th>К-ть котрактників</th>
+				<th>ВНЗ</th>
 			</tr>
 			</tr>
 		</thead>
