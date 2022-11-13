@@ -16,7 +16,7 @@ echo <<<EOF
 <style>
 table, td, th {
   table-layout: fixed;
-  width: 100%;
+  width: auto;
   border-collapse: collapse;
   border: 3px solid black;
   text-align: left;
