@@ -33,7 +33,8 @@ echo '<table>'; // open table
 echo '<tr><th>№</th><th>Область</th><th>Населення, тис</th>
         <th>Кількість ВНЗ</th><th>Число вузів на 100 тис населення</th></tr>';
 echo '<tr>'; // open first row
-$row = fgets($arr);
+$row = fgets($fp);
+
 while(!feof($fp))
 {
     if($count < $cols) {

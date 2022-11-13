@@ -22,7 +22,7 @@
 	<tbody>
 		<?php
 		$city = htmlspecialchars($_POST['city']);
-		$arr = fopen("oblinfo.txt", "r");
+		$arr = fopen("./additional/oblinfo.txt", "r");
 		echo "Регіон: $city";
 		while (!feof($arr)) {
 			$row = fgets($arr);
