@@ -75,7 +75,7 @@ Software engineering, Cherkasy  (Unfinished higher), from 2019 to 2023 (4 year
 				<form action="oblasti.php">
 					<button class="btn" type="submit">show info by region </button>
 				</form>
-				<form action="tableresult.php">
+				<form action="radiopage.php">
 					<button class="btn" type="submit">radio page </button>
 				</form>
 		</div>

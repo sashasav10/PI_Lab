@@ -40,7 +40,7 @@
 			<tr>
 				<th scope='col'>№</th>
 				<th scope='col'>Середній бал</th>
-				<th scope='col'>Число поступивших на бюджет</th>
+				<th scope='col'>К-ть бюджетників</th>
 				<th scope='col'>Недобор</th>
 				<th scope='col'>К-ть котрактників</th>
 				<th scope='col'>ВНЗ</th>
