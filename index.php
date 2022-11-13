@@ -7,6 +7,7 @@
 	button {
 		float:left;
 		margin-top: 10px;
+		margin-left: 50px;
 		color: black;
 		display:table-cell;
 		text-align:center;
