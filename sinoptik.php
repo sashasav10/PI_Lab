@@ -5,7 +5,7 @@ $city=$content ->find('div[class=page-title]')[0]->innertext;
 $date=$content ->find('div[class=date date-1]')[0]->innertext;
 $sunrise=$content ->find('div[class=astro-progress]')[1]->innertext;
 $sunset=$content ->find('div[class=astro-progress]')[2]->innertext;
-$daytime=$content ->find('div[class=date date-1]')[0]->innertext;
+$daytime=$content ->find('div[class=astro-progress]')[0]->innertext;
 
 echo $city;
 echo $date;
