@@ -2,9 +2,7 @@
   <!DOCTYPE html>
   <html>
   <style>
-  	body {
-  		background-color: #94E994;
-  	}
+
   	.title {
   		text-align: center;
   	}
@@ -28,7 +26,7 @@
       $sunrise=$content ->find('div[class=astro-times]')[1]->innertext;
       $sunset=$content ->find('div[class=astro-times]')[2]->innertext;
       $daytime=$content ->find('div[class=astro-progress]')[0]->innertext;
-      $weathertemp=$content ->find('div[class=widget-row-chart widget-row-chart-temperature]')[0]->outertext;
+      $weathertemp=$content ->find('//div[class=widget-row-chart widget-row-chart-temperature]//div[class=chart]//div[class=values]//span[class="unit unit_temperature_c"]')[0]->outertext;
 
       //echo "$city";
       echo "$date";
