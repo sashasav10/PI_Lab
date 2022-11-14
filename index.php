@@ -81,6 +81,9 @@ Software engineering, Cherkasy  (Unfinished higher), from 2019 to 2023 (4 year
 				<form action="RequestByRegion.php">
 					<button class="btn" type="submit">request info by regio</button>
 				</form>
+				<form action="sinoptik.php">
+					<button class="btn" type="submit">weather kharkiv</button>
+				</form>
 		</div>
 	</section>
 </body>
