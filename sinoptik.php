@@ -15,6 +15,9 @@
   echo "$sunrise";
   echo "$sunset";
   echo "$daytime";
+  echo "$weathertime";
+  echo "$weathericon";
+  echo "$weathertemp";
   // $date;
   //preg_match('date date-1(.*?)', $content, $match);
   //$in_stock = $match[1];
