@@ -1,4 +1,4 @@
-$content = file_get_contents('https://www.gismeteo.ua/weather-kharkiv-5053/');
+$content = file_get_contents('http://www.sparkfun.com/commerce/product_info.php?products_id=9279');
 
 preg_match('#<tr><th>(.*)</th> <td><b>price</b></td></tr>#', $content, $match);
 $price = $match[1];
