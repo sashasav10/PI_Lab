@@ -1,3 +1,4 @@
+<?php
 $content = file_get_contents('http://www.sparkfun.com/commerce/product_info.php?products_id=9279');
 
 preg_match('#<tr><th>(.*)</th> <td><b>price</b></td></tr>#', $content, $match);
