@@ -1,5 +1,5 @@
 <?php
-include(./additional/simple_html_dom.php);
+include("simple_html_dom.php");
 $content = file_get_contents('https://www.gismeteo.ua/ua/weather-kharkiv-5053');
 
 
