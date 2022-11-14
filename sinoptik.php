@@ -3,7 +3,6 @@ include("simple_html_dom.php");
 $content = file_get_html('https://www.gismeteo.ua/ua/weather-kharkiv-5053');
 $city=$content ->find('div[class=page-title]')[0]->innertext;
 $date=$content ->find('div[class=date date-1]')[0]->innertext;
-$sunrise=$content ->find('div[class=astro-times]')[1]->innertext;
 $sunset=$content ->find('div[class=astro-times]')[2]->innertext;
 $daytime=$content ->find('div[class=astro-progress]')[0]->innertext;
 
