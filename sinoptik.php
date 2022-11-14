@@ -1,4 +1,5 @@
 <?php
+//Users/oleksandrsaveliev/Documents/4 курс/Програмування інтернет/Lab PI 2022/additional/simplehtmldom_1_9_1
 $content = file_get_contents('https://www.gismeteo.ua/ua/weather-kharkiv-5053/');
 
 preg_match('date date-1', $content, $match);
@@ -17,3 +18,4 @@ echo "7 $match[7]";
 
 echo "Price: $price";
 //Availability: $in_stock\n
+?>
