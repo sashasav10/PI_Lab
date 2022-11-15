@@ -25,7 +25,7 @@
       $date=$content ->find('div[class=localedate]')[0]->innertext;
       $daytime=$content ->find('div[class=astro-sun-top]')[0]->innertext;
       $temperature=$content ->find('div[class=widget-row-chart widget-row-chart-temperature]')[0]->plaintext;
-
+      $temperature=explode(" ", $temperature);
       //echo "$city";
       echo "$date";
       echo "$daytime";
