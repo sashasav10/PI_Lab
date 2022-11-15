@@ -29,7 +29,7 @@
       //echo "$city";
       echo "$date";
       echo "$daytime";
-  echo "2 г:$temperature[0]   5 г:$temperature[2]    8 г:$temperature[4]    11 г:$temperature[6]    14 г:$temperature[8]   17 г:$temperature[10]   20 г:$temperature[12]   23 г:$temperature[14]";
+  echo "2 г:$temperature[0];  5 г:$temperature[2];   8 г:$temperature[4];   11 г:$temperature[6];   14 г:$temperature[8];   17 г:$temperature[10];  20 г:$temperature[12];   23 г:$temperature[14]";
       // $date;
       //preg_match('date date-1(.*?)', $content, $match);
       //$in_stock = $match[1];
