@@ -25,13 +25,13 @@
     </script>
     <style>
         .loader {
-            border: 16px solid #f3f3f3;
+            border: 2px solid #000000;
             /* Light grey */
-            border-top: 16px solid #3498db;
+            border-top: 2px solid #000000;
             /* Blue */
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
             animation: spin 2s linear infinite;
         }
         @keyframes spin {
@@ -43,8 +43,8 @@
             }
         }
         .container {
-            width: 70%;
-            margin-left: 15%;
+            width: 50%;
+            margin-left: 5%;
         }
     </style>
 </head>
