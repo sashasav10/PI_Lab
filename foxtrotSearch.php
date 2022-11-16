@@ -29,7 +29,7 @@
             /* Light grey */
             border-top: 2px solid #000000;
             /* Blue */
-            border-radius: 100%;
+            border-radius: 50%;
             width: 40px;
             height: 40px;
             animation: spin 2s linear infinite;
