@@ -55,7 +55,7 @@
 <body>
     <div class="container">
         <label>Look for</label>
-        <input type="text" id="id-search" onkeyup="handleKeyPress(event)" onchange="handleKeyPress(event)"></input>
+        <input type="text" id="id-search" style="width: 300px;" onkeyup="handleKeyPress(event)" onchange="handleKeyPress(event)"></input>
         <div class="loader" style="display: none;"></div>
         <div id="search_results"></div>
     </div>
