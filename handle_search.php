@@ -10,7 +10,7 @@ if (empty($search_term)) {
 
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://www.foxtrot.com.ua/site_search?search_term={$search_term_encoded}");
+curl_setopt($ch, CURLOPT_URL, "https://www.foxtrot.com.ua/uk/search?query=повер{$search_term_encoded}");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 
