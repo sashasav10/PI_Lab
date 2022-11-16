@@ -24,6 +24,9 @@
         }
     </script>
     <style>
+        .text{
+          width: 50%;
+        }
         .loader {
             border: 2px solid #000000;
             /* Light grey */
