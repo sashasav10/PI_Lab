@@ -1,8 +1,6 @@
-
   <!DOCTYPE html>
   <html>
   <style>
-
   	.title {
   		text-align: center;
   	}
@@ -14,7 +12,6 @@
   		background-color: #D5F5D5;
   		padding: 10px;
   	}
-
   </style>
   <body>
       <p> Kharkiv</p>
@@ -30,12 +27,6 @@
       echo "$date";
       echo "$daytime";
   echo "Температура протягом дня: 2 г:$temperature[0]°  &nbsp; 5 г:$temperature[2]°  &nbsp; 8 г:$temperature[4]° &nbsp; 11 г:$temperature[6]° &nbsp;  14 г:$temperature[8]° &nbsp; 17 г:$temperature[10]° &nbsp; 20 г:$temperature[12]° &nbsp; 23 г:$temperature[14]°"
-      // $date;
-      //preg_match('date date-1(.*?)', $content, $match);
-      //$in_stock = $match[1];
-      //echo $in_stock;
-      //echo "Price: $price";
-      //Availability: $in_stock\n
       ?>
   	<section class="text-section">
   	</section>
