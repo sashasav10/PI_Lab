@@ -24,7 +24,7 @@
         }
     </script>
     <style>
-        .text{
+        .text, .id-search{
           width: 50%;
         }
         .loader {
