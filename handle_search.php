@@ -19,7 +19,7 @@ curl_close($ch);
 
 // parse the html using regex
 preg_match_all(
-    "/<div class=\"container\" bis_skin_checked=\"1\">(.*)<\/div>/s",
+    "/<div class=\"listing__body-wrap image-switch\"(.*)<\/div>/s",
     $rozetka_html,
     $matches
 );
