@@ -28,7 +28,7 @@
           width: 50%;
         }
         .loader {
-            border: 2px solid #000000;
+            border: 2px solid #FFFFFF;
             /* Light grey */
             border-top: 2px solid #000000;
             /* Blue */
