@@ -3,14 +3,14 @@ $search_term = $_GET["search_term"];
 $search_term_encoded = urlencode($search_term);
 
 if (empty($search_term)) {
-    echo "��������� � ������ $search_term �� ��������";
+    echo "$search_term not found";
     return;
 }
 
 
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://santehtochka.com.ua/ua/site_search?search_term={$search_term_encoded}");
+curl_setopt($ch, CURLOPT_URL, "https://www.foxtrot.com.ua/uk/search?query={$search_term_encoded}");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 
@@ -19,7 +19,7 @@ curl_close($ch);
 
 // parse the html using regex
 preg_match_all(
-    "/<ul class=\"b-product-gallery\">(.*)<\/ul>/s",
+    "/<div class=\"listing__body-wrap image-switch\" bis_skin_checked=\"1\">(.*)<\/div>/s",
     $rozetka_html,
     $matches
 );
@@ -27,5 +27,5 @@ preg_match_all(
 if (!empty($matches[0][0])) {
     echo $matches[0][0];
 } else {
-    echo "��������� � ������ $search_term �� ��������";
+    echo "$search_term not found";
 }
