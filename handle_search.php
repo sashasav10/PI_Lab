@@ -23,9 +23,9 @@ preg_match_all(
     $rozetka_html,
     $matches
 );
-$a = substr(matches[0][0], 0, -2);
+//$a = substr(matches[0][0], 0, -2);
 if (!empty($matches[0][0])) {
-    echo $a;
+    echo $matches[0][0];
 } else {
     echo "$search_term not found";
 }
