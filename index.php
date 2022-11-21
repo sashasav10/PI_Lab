@@ -90,6 +90,9 @@ Software engineering, Cherkasy  (Unfinished higher), from 2019 to 2023 (4 year
 				<form action="foxtrotSearch.php">
 					<button class="btn" type="submit">search foxtrot items</button>
 				</form>
+				<form action="ip.php">
+					<button class="btn" type="submit">ip location</button>
+				</form>
 		</div>
 	</section>
 </body>
