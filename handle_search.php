@@ -19,7 +19,7 @@ curl_close($ch);
 
 // parse the html using regex
 preg_match_all(
-    "/<article(.*)<\/article>/s",
+    "/<article>(.*)<\/article>/s",
     $rozetka_html,
     $matches
 );
