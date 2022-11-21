@@ -39,7 +39,7 @@
             </form>
         </div>
     </div>
-    <canvas id="chart" style="width:100%;max-width:40%"></canvas>
+    <canvas id="chart" style="width:100%;max-width:50%"></canvas>
     <?php
     if (isset($_POST['search'])) {
         $lat = $_POST['lat'];
