@@ -12,10 +12,15 @@
     }
 
     .btn-send {
-        border-radius: 10%;
-        width: 120px;
-        height: 50px;
-        border: 2px solid black;
+      float:left;
+      color: black;
+      text-align:center;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      height: 50px;
+      width: 150px;
     }
 
 </style>
@@ -176,7 +181,7 @@ if (isset($_POST['send'])) {
                 <div class="col-3">
                     <div class="m-auto mb-4">
                         <p class="mt-3">
-                            <b style="font-size: 25px;">Geolocation Information</b>
+                            <b style="font-size: 14px;">IP Location</b>
                         </p>
                         <p class="mt-3">
                             <b>IP: </b>
