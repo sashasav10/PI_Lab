@@ -1,28 +1,87 @@
-<?php
-if (isset($_POST['search'])) {
-    $input = $_POST['query'];
-    $s = 'http://forecastfox.accuweather.com/adcbin/forecastfox/weather_data.asp?&partner=forecastfox&par=1234567&location=' . $input . '&metric=1';
-    $x = simplexml_load_string(file_get_contents($s));
-}
+<!DOCTYPE html>
+<html>
 
-?>
-<div class="col-12 text-center">
-    <div class="weather">
-        <form action="" method="POST">
-            <input type="text" name="query" id="search_box" value="" placeholder="Введіть код міста" autocomplete="off"
-                   required>
-            <input type="submit" name="search" value="Search">
-        </form>
-        <?php if (isset($_POST['search'])) { ?>
-            <h2 class="weather__title">Погода <?= $x->local->city; ?></h2>
-            <div class="weather__time">
-                <p class="weather__time">Час: <?= $x->local->time; ?></p>
-            </div>
-            <div class="weather__forecast">
-                <span class="weather__min">Температура: <?= $x->currentconditions->temperature; ?>°C</span>
-            </div>
-            <p class="weather__humidity">Вологість: <?= $x->currentconditions->humidity; ?></p>
-            <p class="weather__wind">Вітер: <?= $x->currentconditions->windspeed; ?> км/ч</p>
-        <?php } ?>
+<head>
+    <meta charset="utf-8" />
+    <title>Weather</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+</head>
+
+<body>
+    <div class="col-12 text-center" style="margin: 2em;">
+        <div class="weather">
+            <form action="" method="POST">
+                <input type="text" name="lat" id="search_box" value="" placeholder="Введіть широту" autocomplete="off" required>
+                <input type="text" name="lon" id="search_box2" value="" placeholder="Введіть довготу" autocomplete="off" required>
+                <input type="submit" name="search" value="Search">
+            </form>
+        </div>
     </div>
-</div>
+    <canvas id="chart" style="width:100%;max-width:700px"></canvas>
+    <?php
+    if (isset($_POST['search'])) {
+        $lat = $_POST['lat'];
+        $lon = $_POST['lon'];
+        $curl = curl_init();
+
+        curl_setopt_array($curl, [
+            CURLOPT_URL => "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/hourly?lat=$lat&lon=$lon&hours=24&units=metric",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => [
+                "X-RapidAPI-Host: weatherbit-v1-mashape.p.rapidapi.com",
+                "X-RapidAPI-Key: 98d303c59fmsh4dc2ae872730e4ap10b972jsn7376f40cdbaf"
+            ],
+        ]);
+        $data = array('total_stud' => 500);
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
+        $res = json_decode($response, true);
+        $val = 'datetime';
+        $val2 = 'temp';
+        $keys = array_keys($res);
+        $arr1 = '[';
+        $arr2 = '[';
+        $data = $res["data"];
+        foreach ($data as $key => $d) {
+            $arr1 = $arr1 . explode(":", $d[$val])[1] . ', ';
+        }
+        $arr1 = $arr1 . "]";
+        foreach ($data as $key => $d) {
+            $arr2 = $arr2 . $d[$val2] . ', ';
+        }
+        $arr2 = $arr2 . "]";
+        $city = $res["city_name"];
+        echo "Місто $city";
+        echo "
+    <script>
+      var xValues = $arr1;
+      var yValues = $arr2;
+      var chart = new Chart(document.getElementById('chart'), {
+      type: 'line',
+      data: {
+      labels: xValues,
+      datasets: [{
+       label: 'Tempreture for 24 Hours (now)',
+       backgroundColor: 'rgba(255, 99, 132, 0.2)',
+       borderColor: 'rgba(255, 99, 132, 1)',
+      data: yValues,
+      borderWidth: 1
+       }]
+        },
+       options: {}
+       });
+     </script>";
+    }
+    ?>
+</body>
+
+</html>
