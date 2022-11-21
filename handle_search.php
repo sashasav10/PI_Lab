@@ -25,7 +25,7 @@ preg_match_all(
 );
 $a = substr(matches[0][0], 0, -200);
 if (!empty($matches[0][0])) {
-    echo $matches[0][0];
+    echo $a;
 } else {
     echo "$search_term not found";
 }
