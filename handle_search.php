@@ -24,8 +24,8 @@ preg_match_all(
     $matches
 );
 
-if (!empty($matches[0][0])) {
+//if (!empty($matches[0][0])) {
     echo $matches[0][0];
-} else {
-    echo "$search_term not found";
-}
+//} else {
+  //  echo "$search_term not found";
+//}
