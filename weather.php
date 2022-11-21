@@ -45,9 +45,6 @@
         $err = curl_error($curl);
         curl_close($curl);
         $res = json_decode($response, true);
-        $city = $res["city_name"];
-        echo "Місто $city";
-        echo "
         $val = 'datetime';
         $val2 = 'temp';
         $keys = array_keys($res);
@@ -62,7 +59,9 @@
             $arr2 = $arr2 . $d[$val2] . ', ';
         }
         $arr2 = $arr2 . "]";
-
+        $city = $res["city_name"];
+        echo "Місто $city";
+        echo "
     <script>
       var xValues = $arr1;
       var yValues = $arr2;
