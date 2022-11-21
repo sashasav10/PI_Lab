@@ -12,15 +12,13 @@
     }
 
     .btn-send {
-      float:left;
-      color: black;
-      text-align:center;
+      border-radius: 10%;
+         width: 100px;
+         height: 30px;
+         border: 3px solid black;
       font-family: 'Montserrat', sans-serif;
       text-transform: uppercase;
       letter-spacing: 2px;
-      cursor: pointer;
-      height: 50px;
-      width: 150px;
     }
 
 </style>
