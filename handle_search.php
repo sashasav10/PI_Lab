@@ -22,9 +22,11 @@ preg_match_all('/<div[^>]+class="listing__body-wrap image-switch"[^>]*>(.*)<\/di
     $rozetka_html,
     $matches
 );
-
-if (!empty($matches[0][0])) {
-    echo $matches[0][0];
-} else {
-    echo "$search_term not found";
-}
+echo "<pre>";
+print($matches[1]);  
+echo "</pre>";
+//if (!empty($matches[0][0])) {
+  //  echo $matches[0][0];
+//} else {
+  //  echo "$search_term not found";
+//}
