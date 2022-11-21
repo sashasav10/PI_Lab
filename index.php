@@ -84,6 +84,9 @@ Software engineering, Cherkasy  (Unfinished higher), from 2019 to 2023 (4 year
 				<form action="sinoptik.php">
 					<button class="btn" type="submit">weather kharkiv</button>
 				</form>
+				<form action="weather.php">
+					<button class="btn" type="submit">weather</button>
+				</form>
 				<form action="foxtrotSearch.php">
 					<button class="btn" type="submit">search foxtrot items</button>
 				</form>
