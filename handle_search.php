@@ -18,12 +18,12 @@ $rozetka_html = curl_exec($ch);
 curl_close($ch);
 
 // parse the html using regex
-preg_match_all('/<div[^>]+class="listing__body-wrap image-switch"[^>]*>(.*)<\/div>/',
+preg_match_all('/<div[^>]+class=\"listing__body-wrap image-switch\"[^>]*>(.*)<\/div>/',
     $rozetka_html,
     $matches
 );
 echo "<pre>";
-print($matches[0][0]);  
+print($matches[0][0]);
 echo "</pre>";
 //if (!empty($matches[0][0])) {
   //  echo $matches[0][0];
