@@ -13,13 +13,13 @@
     <div class="col-12 text-center" style="margin: 2em;">
         <div class="weather">
             <form action="" method="POST">
-                <input type="text" name="lat" id="search_box" value="" placeholder="Введіть широту" autocomplete="off" required>
-                <input type="text" name="lon" id="search_box2" value="" placeholder="Введіть довготу" autocomplete="off" required>
+                <input type="text" name="lat" id="search_box" value="" placeholder="Широту" autocomplete="off" required>
+                <input type="text" name="lon" id="search_box2" value="" placeholder="Довгота" autocomplete="off" required>
                 <input type="submit" name="search" value="Search">
             </form>
         </div>
     </div>
-    <canvas id="chart" style="width:100%;max-width:700px"></canvas>
+    <canvas id="chart" style="width:100%;max-width:500px"></canvas>
     <?php
     if (isset($_POST['search'])) {
         $lat = $_POST['lat'];
@@ -45,6 +45,9 @@
         $err = curl_error($curl);
         curl_close($curl);
         $res = json_decode($response, true);
+        $city = $res["city_name"];
+        echo "Місто $city";
+        echo "
         $val = 'datetime';
         $val2 = 'temp';
         $keys = array_keys($res);
@@ -59,9 +62,7 @@
             $arr2 = $arr2 . $d[$val2] . ', ';
         }
         $arr2 = $arr2 . "]";
-        $city = $res["city_name"];
-        echo "Місто $city";
-        echo "
+
     <script>
       var xValues = $arr1;
       var yValues = $arr2;
@@ -71,10 +72,10 @@
       labels: xValues,
       datasets: [{
        label: 'Tempreture for 24 Hours (now)',
-       backgroundColor: 'rgba(255, 99, 132, 0.2)',
-       borderColor: 'rgba(255, 99, 132, 1)',
+       backgroundColor: 'rgba(154, 150, 160, 0.2)',
+       borderColor: 'rgba(154, 150, 160, 1)',
       data: yValues,
-      borderWidth: 1
+      borderWidth: 0.8
        }]
         },
        options: {}
