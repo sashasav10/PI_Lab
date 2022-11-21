@@ -13,7 +13,7 @@
       min-height: auto;
       border-color: #2B2B2B;
       background-color: #2B2B2B;
-      position: absolute;
+      position: fixed;
       display: inline-block;
       top: 30px;
       left: 30px;
