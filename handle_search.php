@@ -25,7 +25,9 @@ preg_match_all(
 );
 
 if (!empty($matches[0][0])) {
-    echo $matches;
+  foreach ($matches as $realtitle) {
+    echo $realtitle;
+}
 } else {
     echo "$search_term not found";
 }
