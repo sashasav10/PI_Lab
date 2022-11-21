@@ -16,7 +16,7 @@
       position: fixed;
       display: inline-block;
       top: 30px;
-      left: 30px;
+      left: 60%;
       margin-right: 0;
       float: right;
       color: #FFFFFF;
