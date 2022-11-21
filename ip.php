@@ -12,10 +12,8 @@
     }
 
     .btn-send {
-      border-radius: 10%;
          width: 100px;
          height: 30px;
-         border: 3px solid black;
       font-family: 'Montserrat', sans-serif;
       text-transform: uppercase;
       letter-spacing: 2px;
