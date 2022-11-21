@@ -24,8 +24,8 @@ preg_match_all(
     $matches
 );
 
-if (!empty($matches[0][0])) {
-    echo $matches[0][0];
-} else {
-    echo "$search_term not found";
+echo "<pre>";
+foreach ($matches[1] as $realtitle) {
+    echo $realtitle . "\n";
 }
+echo "</pre>";
