@@ -19,13 +19,13 @@ curl_close($ch);
 
 // parse the html using regex
 preg_match_all(
-    "/<div class=\"listing__body-wrap image-switch\" \<section\> (.*)<\/section>/s",
+    "/<div class=\"listing__body-wrap image-switch\" (.*)<\/div>/s",
     $rozetka_html,
     $matches
 );
 
 if (!empty($matches[0][0])) {
-    echo $matches[0][0];
+    echo $matches[0][0]->find('<section>')[0];
 } else {
     echo "$search_term not found";
 }
