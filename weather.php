@@ -13,11 +13,9 @@
       min-height: auto;
       border-color: #2B2B2B;
       background-color: #2B2B2B;
-      display: inline-block;
+      position: absolute;
       top: 30px;
       left: 30px;
-      margin-right: 0;
-      float: right;
       color: #FFFFFF;
       font-family: Arial, sans-serif
       }
