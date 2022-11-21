@@ -23,7 +23,7 @@ preg_match_all('/<div[^>]+class="listing__body-wrap image-switch"[^>]*>(.*)<\/di
     $matches
 );
 echo "<pre>";
-print($matches[1]);  
+print($matches);  
 echo "</pre>";
 //if (!empty($matches[0][0])) {
   //  echo $matches[0][0];
