@@ -128,9 +128,9 @@ if (isset($_POST['send'])) {
                                 <b>Flag: </b>
                             </span>
                             <?php if ($country_code == null) { ?>
-                                <img src="./addtional/flags/_unitednations.png" alt="unitednations" />
+                                <img src="./additional/flags/_unitednations.png" alt="unitednations" />
                             <?php } else { ?>
-                                <img src="./addtional/flags/<?= $country_code; ?>.png" alt="<?= $country_code; ?>" />
+                                <img src="./additional/flags/<?= $country_code; ?>.png" alt="<?= $country_code; ?>" />
                             <?php } ?>
                         </p>
                     </div>
@@ -247,9 +247,9 @@ if (isset($_POST['send'])) {
                                 <b>Flag:</b>
                             </span>
                             <?php if ($country_code == null) { ?>
-                                <img src="./addtional/flags/_unitednations.png" alt="unitednations" />
+                                <img src="./additional/flags/_unitednations.png" alt="unitednations" />
                             <?php } else { ?>
-                                <img src="./addtional/flags/<?= $country_code; ?>.png" alt="<?= $country_code; ?>" />
+                                <img src="./additional/flags/<?= $country_code; ?>.png" alt="<?= $country_code; ?>" />
                             <?php } ?>
                         </p>
                     </div>
