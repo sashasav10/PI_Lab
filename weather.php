@@ -15,7 +15,7 @@
       background-color: #2B2B2B;
       position: fixed;
       display: inline-block;
-      top: 30px;
+      top: 0px;
       left: 60%;
       margin-right: 0;
       float: right;
