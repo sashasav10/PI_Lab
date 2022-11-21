@@ -9,10 +9,11 @@
     </script>
 </head>
     <style>.meteo-informer {
-      width: 590px;
-      min-height: 619px;
+      width: 40%;
+      min-height: auto;
       border-color: #2B2B2B;
       background-color: #2B2B2B;
+      margin-right: 0;
       color: #FFFFFF;
       font-family: Arial, sans-serif
       }
@@ -33,7 +34,7 @@
             </form>
         </div>
     </div>
-    <canvas id="chart" style="width:100%;max-width:65%"></canvas>
+    <canvas id="chart" style="width:100%;max-width:40%"></canvas>
     <?php
     if (isset($_POST['search'])) {
         $lat = $_POST['lat'];
