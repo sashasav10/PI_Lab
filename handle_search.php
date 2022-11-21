@@ -19,7 +19,7 @@ curl_close($ch);
 
 // parse the html using regex
 preg_match_all(
-    "/<div class=\"listing__body-wrap image-switch\"(.*)<nav class=\"listing__pagination\"/s",
+    "/<div class=\"listing__body-wrap image-switch\"(.*)\<nav class=\"listing__pagination\"/s",
     $rozetka_html,
     $matches
 );
