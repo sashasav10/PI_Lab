@@ -14,6 +14,7 @@
       border-color: #2B2B2B;
       background-color: #2B2B2B;
       display: inline-block;
+      position: relative;
       margin-right: 0;
       float: right;
       color: #FFFFFF;
