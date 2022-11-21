@@ -8,7 +8,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
 </head>
-
+    <style>.meteo-informer {
+      width: 590px;
+      min-height: 619px;
+      border-color: #2B2B2B;
+      background-color: #2B2B2B;
+      color: #FFFFFF;
+      font-family: Arial, sans-serif
+      }
+      .meteo-informer__cell, .meteo-informer__interval-night {
+        border-bottom-color: #FFFFFF;
+        }
+        .meteo-informer__cell-info, .meteo-informer__cell-logo {
+          border-bottom-color: #2B2B2B;
+        }
+    </style>
 <body>
     <div class="col-12 text-center" style="margin: 2em;">
         <div class="weather">
@@ -82,7 +96,7 @@
      </script>";
     }
 
-    <style>.meteo-informer {width: 590px;min-height: 619px;border-color: #2B2B2B;background-color: #2B2B2B;color: #FFFFFF;font-family: Arial, sans-serif} .meteo-informer__cell, .meteo-informer__interval-night {border-bottom-color: #FFFFFF;} .meteo-informer__cell-info, .meteo-informer__cell-logo {border-bottom-color: #2B2B2B;}</style>
+
 <div id="meteo_informer_6593cff320280134093cb806da18a91e"><p><a href="https://meteo.ua/ua/34/kiev">Погода в Києві
 </a></p>
 </div>
