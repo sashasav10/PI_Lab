@@ -13,13 +13,13 @@
     <div class="col-12 text-center" style="margin: 2em;">
         <div class="weather">
             <form action="" method="POST">
-                <input type="text" name="lat" id="search_box" value="" placeholder="Широту" autocomplete="off" required>
-                <input type="text" name="lon" id="search_box2" value="" placeholder="Довгота" autocomplete="off" required>
+                <input type="text" name="lat" id="search_box" value="" placeholder="Latitude" autocomplete="off" required>
+                <input type="text" name="lon" id="search_box2" value="" placeholder="Longitude" autocomplete="off" required>
                 <input type="submit" name="search" value="Search">
             </form>
         </div>
     </div>
-    <canvas id="chart" style="width:100%;max-width:500px"></canvas>
+    <canvas id="chart" style="width:100%;max-width:100%"></canvas>
     <?php
     if (isset($_POST['search'])) {
         $lat = $_POST['lat'];
@@ -60,7 +60,7 @@
         }
         $arr2 = $arr2 . "]";
         $city = $res["city_name"];
-        echo "Місто $city";
+        echo "Сity $city";
         echo "
     <script>
       var xValues = $arr1;
@@ -70,9 +70,9 @@
       data: {
       labels: xValues,
       datasets: [{
-       label: 'Tempreture for 24 Hours (now)',
-       backgroundColor: 'rgba(154, 150, 160, 0.2)',
-       borderColor: 'rgba(154, 150, 160, 1)',
+       label: 'Tempreture',
+       backgroundColor: 'rgba(180, 215, 64, 0.2)',
+       borderColor: 'rgba(180, 215, 64, 1)',
       data: yValues,
       borderWidth: 0.8
        }]
