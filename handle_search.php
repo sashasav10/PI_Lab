@@ -23,7 +23,7 @@ preg_match_all(
     $rozetka_html,
     $matches
 );
-$matches[0][0] = substr($matches[0][0], 0, -1000);
+$matches[0][0] = substr($matches[0][0], 0, -10000);
 if (!empty($matches[0][0])) {
     echo $matches[0][0];
 } else {
