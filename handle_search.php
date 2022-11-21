@@ -19,13 +19,13 @@ curl_close($ch);
 
 // parse the html using regex
 preg_match_all(
-    '/<article\s>(.*)<\/article>/',
+    '/<article.*<\/article>/',
     $rozetka_html,
     $matches
 );
 
-echo "<pre>";
-foreach ($matches[1] as $realtitle) {
-    echo $realtitle . "\n";
+if (!empty($matches[0][0])) {
+    echo $matches[0][0];
+} else {
+    echo "$search_term not found";
 }
-echo "</pre>";
