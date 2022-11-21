@@ -19,13 +19,13 @@ curl_close($ch);
 
 // parse the html using regex
 preg_match_all(
-    "/<div class=\"listing__body-wrap image-switch\"(.*)<nav class=\"listing__pagination\" /s",
+    "/<div class=\"listing__body-wrap image-switch\"(.*)<nav class=\"listing__pagination\" data-pages-count=\"4\" data-max-products-for-show-more=\"77\"> /s",
     $rozetka_html,
     $matches
 );
 
 if (!empty($matches[0][0])) {
-    echo $matches;
+    echo $matches[0][0];
 } else {
     echo "$search_term not found";
 }
