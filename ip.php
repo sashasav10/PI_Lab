@@ -58,7 +58,7 @@ if (isset($_POST['send'])) {
                 <div class="col-3">
                     <div class="m-auto mb-4">
                         <p class="mt-3">
-                            <b style="font-size: 25px;">Geolocation Information</b>
+                            <b style="font-size: 18px;">IP Location</b>
                         </p>
                         <p class="mt-3">
                             <b>IP: </b>
